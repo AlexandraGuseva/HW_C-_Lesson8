@@ -5,12 +5,14 @@
 // 18 20 8
 // 15 18 7
 Console.Clear();
-int inputCountRow = CheckCorrectInputRowsAndCollumns("Input count row: ");
-int inputCountColumn = CheckCorrectInputRowsAndCollumns("Input count columns: ");
+int inputCountRowArray1 = CheckCorrectInputRowsAndCollumns("Input count row for array1: ");
+int inputCountColumnArray1 = CheckCorrectInputRowsAndCollumns("Input count columns for array1: ");
+int inputCountRowArray2 = CheckCorrectInputRowsAndCollumns("Input count row for array2: ");
+int inputCountColumnArray2 = CheckCorrectInputRowsAndCollumns("Input count columns for array2: ");
 int inputRandomMin = ReadConsole("Input min random number: ");
 int inputRandomMax = ReadConsole("Input max random number: ");
-int[,] randomArray1 = GenerateArray2D(inputCountRow, inputCountColumn, inputRandomMin, inputRandomMax);
-int[,] randomArray2 = GenerateArray2D(inputCountRow, inputCountColumn, inputRandomMin, inputRandomMax);
+int[,] randomArray1 = GenerateArray2D(inputCountRowArray1, inputCountColumnArray1, inputRandomMin, inputRandomMax);
+int[,] randomArray2 = GenerateArray2D(inputCountRowArray2, inputCountColumnArray2, inputRandomMin, inputRandomMax);
 
 int[,] GenerateArray2D(int rows, int columns, int min, int max) // Generating random(min,max) array[rows,columns] and return this array
 {
@@ -58,24 +60,30 @@ int ReadConsole(string message) // convert in to int32 input numbers on console
     return number;
 }
 
-void ProductOfTwoArrays(int[,] array1, int[,] array2) // finds the product of elements of two arrays
+int[,] MultiplyArray(int[,] array1, int[,] array2) // finds the product of elements of two arrays
 {
-    int[,] tempArray = new int[inputCountColumn, inputCountColumn];
-    for (int i = 0; i < inputCountRow; i++)
+    int[,] resultArray = new int[inputCountRowArray1, inputCountColumnArray2];
+    for (int i = 0; i < array1.GetLength(0); i++)
     {
-        for (int j = 0; j < inputCountColumn; j++)
+        for (int j = 0; j < array2.GetLength(1); j++)
         {
-            tempArray[i, j] = array1[i, j] * array2[i, j];
-            Console.Write($"{tempArray[i, j]}\t");
+            int sum = 0;
+            for (int k = 0; k < array1.GetLength(1); k++)
+            {
+                sum += array1[i, k] * array2[k, j];
+            }
+            resultArray[i, j] = sum;
         }
     }
+    return resultArray;
 }
-
 
 Console.WriteLine($"\nYours array1:");
 PrintArray2D(randomArray1);
 Console.WriteLine($"\nYours array2:");
 PrintArray2D(randomArray2);
 Console.WriteLine();
-
-
+int[,] multipleArray = MultiplyArray(randomArray1, randomArray2);
+Console.WriteLine($"\nResult multiply array12:");
+PrintArray2D(multipleArray);
+Console.WriteLine();
