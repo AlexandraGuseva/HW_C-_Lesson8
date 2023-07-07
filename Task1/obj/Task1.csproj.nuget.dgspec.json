@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\GB\\ДЗ\\HW_Lesson8_C#\\Task1\\Task1.csproj": {}
+    "c:\\Users\\osgmg\\Desktop\\ГБ\\ДЗ\\HW_Lesson8_C#\\Task1\\Task1.csproj": {}
   },
   "projects": {
-    "e:\\GB\\ДЗ\\HW_Lesson8_C#\\Task1\\Task1.csproj": {
+    "c:\\Users\\osgmg\\Desktop\\ГБ\\ДЗ\\HW_Lesson8_C#\\Task1\\Task1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\GB\\ДЗ\\HW_Lesson8_C#\\Task1\\Task1.csproj",
+        "projectUniqueName": "c:\\Users\\osgmg\\Desktop\\ГБ\\ДЗ\\HW_Lesson8_C#\\Task1\\Task1.csproj",
         "projectName": "Task1",
-        "projectPath": "e:\\GB\\ДЗ\\HW_Lesson8_C#\\Task1\\Task1.csproj",
+        "projectPath": "c:\\Users\\osgmg\\Desktop\\ГБ\\ДЗ\\HW_Lesson8_C#\\Task1\\Task1.csproj",
         "packagesPath": "C:\\Users\\osgmg\\.nuget\\packages\\",
-        "outputPath": "e:\\GB\\ДЗ\\HW_Lesson8_C#\\Task1\\obj\\",
+        "outputPath": "c:\\Users\\osgmg\\Desktop\\ГБ\\ДЗ\\HW_Lesson8_C#\\Task1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\osgmg\\AppData\\Roaming\\NuGet\\NuGet.Config",
